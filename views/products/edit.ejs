@@ -1,0 +1,51 @@
+<%- include("../partials/header")-%>
+    <%- include("../partials/navbar")-%>
+
+        <div class="container">
+
+
+            <form class="validated-form" action="/products/<%=product.id%>?_method=PATCH" method="POST"
+                style="max-width:70%;margin:10px auto" novalidate>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" value="<%=product.name%>" name="product[name]"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="img" class="form-label">Image URL</label>
+                    <input type="text" class="form-control" id="img" value="<%=product.img%>" name="product[img]"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price in $</label>
+                    <input type="number" class="form-control" id="price" value="<%=product.price%>"
+                        name="product[price]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="desc" class="form-label">Description</label>
+                    <textarea class="form-control" id="desc" cols="30" rows="5" name="product[desc]"
+                        required><%=product.desc%></textarea>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+
+
+        </div>
+
+
+
+        <%- include("../partials/footer")-%>
