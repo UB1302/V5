@@ -21,7 +21,12 @@
                                     <%=product.desc%>
                                 </p>
                                 <a href="/products/<%=product._id%>" class="btn btn-success">Buy</a>
-                                <a href="/products/<%=product._id%>" class="btn btn-secondary">Add to Cart</a>
+
+                                <form action="/user/<%=product._id%>/cart" method="POST">
+                                    <button class="btn btn-outline-primary">Add to Cart</button>
+
+                                </form>
+
                                 <a href="/products/<%=product._id%>/edit" class="btn btn-outline-primary">Edit</a>
 
                                 <form action="/products/<%=product._id%>?_method=DELETE" method="POST">

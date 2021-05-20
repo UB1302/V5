@@ -15,6 +15,7 @@ const User = require('./models/user');
 // Routes
 const productRoutes = require('./routes/product');
 const authRoutes = require('./routes/auth');
+const cartRoutes = require('./routes/cart');
 
 
 mongoose.connect('mongodb://localhost:27017/shopApp',
@@ -73,6 +74,7 @@ app.get('/', (req, res) => {
 
 app.use(productRoutes);
 app.use(authRoutes);
+app.use(cartRoutes);
 
 
 
