@@ -23,7 +23,7 @@ const authRoutes = require('./routes/auth');
 const cartRoutes = require('./routes/cart');
 
 
-mongoose.connect('mongodb://localhost:27017/shopApp',
+mongoose.connect(process.env.DB_URL,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
@@ -85,6 +85,6 @@ app.use(cartRoutes);
 
 
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log("Server started at PORT 3000");
 })
