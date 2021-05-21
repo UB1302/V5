@@ -1,4 +1,9 @@
-//Star rating and cart management
+//Star rating and cart management and dot env
+
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
+
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
