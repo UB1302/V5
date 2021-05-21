@@ -1,4 +1,4 @@
-//Star rating
+//Star rating and cart management
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
